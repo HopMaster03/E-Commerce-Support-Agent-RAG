@@ -1,0 +1,104 @@
+{
+    "customer_orders": [
+      {
+        "order_id": "A123456789",
+        "order_date": "2025-03-25",
+        "expected_delivery_date": "2025-03-30",
+        "customer_name": "Marcus Merellio",
+        "customer_email": "marcusmllo@gmail.com",
+        "customer_phone": "(555) 123-4567",
+        "shipping_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "billing_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "payment_method": "Apple Pay",
+        "order_status": "Shipped",
+        "tracking_number": "7896541230FEDEX",
+        "products": [
+          {
+            "product_name": "Apple iPhone 13",
+            "product_type": "Smartphone",
+            "unit_price": 799,
+            "ordered_quantity": 1,
+            "discount": 5,
+            "line_total": 759.05
+          }
+        ]
+      },
+      {
+        "order_id": "A123456790",
+        "order_date": "2025-03-26",
+        "expected_delivery_date": "2025-03-31",
+        "customer_name": "Marcus Merellio",
+        "customer_email": "marcusmllo@gmail.com",
+        "customer_phone": "(555) 123-4567",
+        "shipping_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "billing_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "payment_method": "Credit Card",
+        "order_status": "Processing",
+        "tracking_number": "7896541231FEDEX",
+        "products": [
+          {
+            "product_name": "Apple iPad Pro (11-inch)",
+            "product_type": "Tablet",
+            "unit_price": 799,
+            "ordered_quantity": 1,
+            "discount": 10,
+            "line_total": 719.10
+          }
+        ]
+      },
+      {
+        "order_id": "A123456791",
+        "order_date": "2025-03-27",
+        "expected_delivery_date": "2025-04-01",
+        "customer_name": "Marcus Merellio",
+        "customer_email": "marcusmllo@gmail.com",
+        "customer_phone": "(555) 123-4567",
+        "shipping_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "billing_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "payment_method": "Apple Pay",
+        "order_status": "Delivered",
+        "tracking_number": "7896541232FEDEX",
+        "products": [
+          {
+            "product_name": "Apple MacBook Air (M1)",
+            "product_type": "Laptop",
+            "unit_price": 999,
+            "ordered_quantity": 1,
+            "discount": 7,
+            "line_total": 929.07
+          }
+        ]
+      },
+      {
+        "order_id": "A123456792",
+        "order_date": "2025-03-28",
+        "expected_delivery_date": "2025-04-02",
+        "customer_name": "Marcus Merellio",
+        "customer_email": "marcusmllo@gmail.com",
+        "customer_phone": "(555) 123-4567",
+        "shipping_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "billing_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+        "payment_method": "Credit Card",
+        "order_status": "Processing",
+        "tracking_number": "7896541233FEDEX",
+        "products": [
+          {
+            "product_name": "Apple AirPods Pro",
+            "product_type": "Wireless Earbuds",
+            "unit_price": 249,
+            "ordered_quantity": 2,
+            "discount": 8,
+            "line_total": 458.34
+          }
+        ]
+      }
+    ],
+    "customer_details": {
+      "customer_name": "Marcus Merellio",
+      "customer_email": "marcusmllo@gmail.com",
+      "customer_phone": "(555) 123-4567",
+      "shipping_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA",
+      "billing_address": "1234 Elm Street, Suite 101, Cupertino, CA 95014, USA"
+    }
+  }
+  

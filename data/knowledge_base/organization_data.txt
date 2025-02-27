@@ -1,0 +1,92 @@
+# Apple Inc. Organization Details & FAQs
+
+## 1. Organization Details
+
+**Company Name:** Apple Inc.  
+**Headquarters:** 1 Apple Park Way, Cupertino, CA 95014, USA  
+**Website:** [www.apple.com](https://www.apple.com)  
+**Customer Service Phone:** 1-800–275–2273  
+**Email:** support@apple.com  
+
+### Company Overview  
+- **Founded:** April 1, 1976  
+- **Founders:** Steve Jobs, Steve Wozniak, Ronald Wayne  
+- **CEO:** Tim Cook  
+- **Industry:** Consumer Electronics, Software, Digital Services  
+- **Revenue (2024):** $394 billion (approx.)  
+- **Employees:** Over 160,000 worldwide  
+
+### Core Products & Services  
+Apple is known for its **innovative products and services** in hardware, software, and digital content.
+
+#### Key Product Categories  
+- **Smartphones:** iPhone series (e.g., iPhone 15, iPhone 15 Pro Max)  
+- **Tablets:** iPad, iPad Pro, iPad Air, iPad Mini  
+- **Computers:** MacBook Air, MacBook Pro, iMac, Mac Mini, Mac Studio, Mac Pro  
+- **Wearables:** Apple Watch, AirPods, Vision Pro  
+- **Accessories:** Magic Keyboard, Magic Mouse, Apple Pencil, HomePod  
+- **Software & OS:** iOS, macOS, watchOS, iPadOS, visionOS  
+- **Services:** Apple Music, Apple TV+, iCloud, Apple Arcade, Apple Pay, AppleCare  
+
+### Sustainability & Environmental Initiatives  
+- **Carbon Neutral Goals:** Apple aims for **100% carbon neutrality** by 2030 across its supply chain and product life cycle.  
+- **Recycling Programs:** The company uses **recycled aluminum** and **rare earth materials** in devices like MacBooks and iPhones.  
+- **Renewable Energy:** Apple’s global offices, stores, and data centers run on **100% renewable energy**.  
+
+### Customer Support & Warranty Services  
+Apple provides **multiple support channels**, including:  
+- **Live Chat & Phone Support:** 24/7 assistance via [Apple Support](https://support.apple.com)  
+- **AppleCare+:** Extended warranty and accidental damage protection  
+- **In-Store Genius Bar Appointments:** Tech support in Apple Stores  
+
+---
+
+## 2. Frequently Asked Questions (FAQs)
+
+### 1. How can I track my Apple order?  
+You can track your order status via your Apple account on [Apple’s Order Tracking page](https://www.apple.com/orderstatus) or through the tracking link sent in your confirmation email.
+
+### 2. What is Apple’s return policy?  
+Apple offers a **14-day return window** for most products. Returns can be initiated online or in an Apple Store. Items like custom-configured Macs and opened software may not be eligible for returns.
+
+### 3. How do I contact Apple customer support?  
+- **Phone Support:** Call **1-800-MY-APPLE (1-800-692-7753)**  
+- **Online Chat:** Available at [Apple Support](https://support.apple.com)  
+- **Apple Store Appointments:** Book in-store assistance at the **Genius Bar**  
+
+### 4. How long does Apple’s warranty last?  
+Most Apple products come with a **one-year limited warranty** and **90 days of free technical support**. Customers can purchase **AppleCare+** for extended coverage and accidental damage protection.
+
+### 5. Does Apple offer student or corporate discounts?  
+Yes! Apple provides:  
+- **Apple Education Pricing:** Discounts for students, teachers, and faculty members on Macs, iPads, and accessories.  
+- **Apple Business Discounts:** Bulk pricing for companies purchasing multiple Apple products.  
+
+### 6. What payment methods does Apple accept?  
+Apple accepts:  
+- **Credit/Debit Cards (Visa, Mastercard, AMEX, etc.)**  
+- **Apple Pay**  
+- **PayPal**  
+- **Apple Gift Cards**  
+- **EMI & Financing Options** (subject to region availability)  
+
+### 7. How do I trade in my old Apple device?  
+Apple’s **Trade-In Program** allows customers to exchange old devices for Apple Store credit or recycling. Visit [Apple Trade-In](https://www.apple.com/shop/trade-in) for eligibility details.
+
+### 8. Can I cancel or modify my Apple order after placing it?  
+You can cancel or modify an order **before it ships** via [Apple’s Order Status Page](https://www.apple.com/orderstatus). If an order is already in transit, you may have to return it after delivery.
+
+### 9. What should I do if my Apple product is damaged or defective?  
+- If your product arrives **damaged**, contact Apple **within 14 days** for a replacement.  
+- If it’s **defective under warranty**, visit an Apple Store or authorized service provider for a free repair or replacement.  
+- AppleCare+ users get **priority service and discounted repair costs**.  
+
+### 10. How does Apple protect my privacy and data?  
+Apple follows strict **privacy-first policies**, including:  
+- **End-to-end encryption** for iMessage, FaceTime, and iCloud data  
+- **App Tracking Transparency** to prevent unauthorized data collection  
+- **Secure Enclave technology** for biometric authentication (Face ID, Touch ID)  
+
+For privacy details, visit Apple’s **Privacy Policy** at [privacy.apple.com](https://privacy.apple.com).  
+
+---
