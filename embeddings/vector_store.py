@@ -1,71 +1,82 @@
 import chromadb
 from chromadb.config import Settings
+from embedding_service import EmbeddingService
 import uuid
-from config.settings import CHROMA_PERSIST_DIRECTORY
+from typing import List, Dict, Any, Optional
 
 class ChromaVectorStore:
-    def __init__(self):
-        self.client = chromadb.PersistentClient(
-            path=CHROMA_PERSIST_DIRECTORY,
-            settings=Settings(allow_reset=True)
-        )
-        # Create collections if they don't exist
-        self.product_collection = self._get_or_create_collection("product_data")
-        self.kb_collection = self._get_or_create_collection("knowledge_base")
+    """
+    A wrapper class for ChromaDB to store pre-generated embeddings
+    using an ephemeral client.
+    """
     
-    def _get_or_create_collection(self, name):
-        try:
-            return self.client.get_collection(name=name)
-        except:
-            return self.client.create_collection(name=name)
-    
-    def add_texts(self, collection_name, texts, embeddings, metadatas=None):
+    def __init__(
+        self,
+        collection_name: str = "kb_collection"
+    ):
         """
-        Add texts and their embeddings to the specified collection
+        Initialize the ChromaVectorStore with an ephemeral client.
         
         Args:
-            collection_name (str): Name of the collection
-            texts (list): List of text strings
-            embeddings (list): List of embedding vectors
-            metadatas (list, optional): List of metadata dicts
+            collection_name: Name of the collection to use/create.
         """
-        collection = self._get_or_create_collection(collection_name)
+        # Initialize ephemeral client (in-memory only)
+        self.client = chromadb.Client(Settings(
+            anonymized_telemetry=False
+        ))
         
+        # Create collection
+        self.collection = self.client.create_collection(name=collection_name)
+        self.embedding_service = EmbeddingService()
+    
+    def add_embeddings(
+        self,
+        embeddings: List[List[float]],
+        texts: List[str] = None,
+        metadatas: Optional[List[Dict[str, Any]]] = None,
+        ids: Optional[List[str]] = None
+    ) -> List[str]:
+        """
+        Add pre-generated embeddings to the collection if they haven't been added before.
+        
+        Args:
+            embeddings: List of pre-generated embedding vectors.
+            texts: List of text documents corresponding to the embeddings.
+            metadatas: Optional metadata for each document.
+            ids: Optional custom IDs for each document. Will generate UUIDs if not provided.
+        """
         # Generate IDs if not provided
-        ids = [str(uuid.uuid4()) for _ in range(len(texts))]
+        if ids is None:
+            ids = [str(uuid.uuid4()) for _ in embeddings]
         
-        # Add data to collection
-        collection.add(
-            documents=texts,
-            embeddings=embeddings,
-            metadatas=metadatas if metadatas else None,
-            ids=ids
+        # Check which IDs are not already in the collection
+        existing_ids = set()
+        try:
+            existing = self.collection.get(ids=ids)
+            existing_ids = set(existing['ids'])
+        except:
+            pass  # No existing IDs
+        
+        # Filter out already existing items
+        new_indices = [i for i, id_val in enumerate(ids) if id_val not in existing_ids]
+        
+        if not new_indices:
+            return  # Nothing new to add
+        
+        # Extract only the new items to add
+        new_ids = [ids[i] for i in new_indices]
+        new_embeddings = [embeddings[i] for i in new_indices]
+        new_texts = [texts[i] for i in new_indices] if texts else None
+        new_metadatas = [metadatas[i] for i in new_indices] if metadatas else None
+        
+        # Add new embeddings to the collection
+        self.collection.add(
+            embeddings=new_embeddings,
+            documents=new_texts,
+            metadatas=new_metadatas,
+            ids=new_ids
         )
-        
-        return ids
+        return new_ids
+
     
-    def query(self, collection_name, query_embedding, top_k=5):
-        """
-        Query the vector store with an embedding
-        
-        Args:
-            collection_name (str): Name of the collection to query
-            query_embedding (list): Query embedding vector
-            top_k (int): Number of results to return
-            
-        Returns:
-            dict: Query results with documents, ids, and metadatas
-        """
-        collection = self._get_or_create_collection(collection_name)
-        
-        results = collection.query(
-            query_embeddings=[query_embedding],
-            n_results=top_k
-        )
-        
-        return {
-            "documents": results["documents"][0],
-            "ids": results["ids"][0],
-            "metadatas": results["metadatas"][0] if results["metadatas"] else None,
-            "distances": results["distances"][0]
-        }
+    

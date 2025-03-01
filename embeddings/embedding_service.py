@@ -1,5 +1,6 @@
 import litellm
 from config.settings import OPENAI_API_KEY, EMBEDDING_MODEL
+from models.schema import OrgDetailsChunk,FAQChunk
 
 class EmbeddingService:
     def __init__(self):
@@ -21,7 +22,7 @@ class EmbeddingService:
             
         # Handle batching for efficiency
         embeddings = []
-        batch_size = 20  # Adjust based on API limits
+        batch_size = 5  # Can adjust based on document size and Rate limit
         
         for i in range(0, len(texts), batch_size):
             batch = texts[i:i+batch_size]
@@ -34,21 +35,23 @@ class EmbeddingService:
                 embeddings.extend(batch_embeddings)
             except Exception as e:
                 print(f"Error generating embeddings: {e}")
-                # Add appropriate error handling
-        
+                
         return embeddings
     
-    def get_single_embedding(self, text):
+    ### TODO: Check if this function is required
+    def get_query_embedding(self, query):
         """Generate embedding for a single text"""
-        if not text:
+        if not query:
             return None
             
         try:
             response = litellm.embedding(
                 model=self.model,
-                input=[text]
+                input=query
             )
             return response["data"][0]["embedding"]
         except Exception as e:
             print(f"Error generating single embedding: {e}")
             return None
+    
+    

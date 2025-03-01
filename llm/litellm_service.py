@@ -5,7 +5,6 @@ class LiteLLMService:
     def __init__(self):
         # Set API keys
         litellm.api_key = OPENAI_API_KEY
-        litellm.anthropic_api_key = ANTHROPIC_API_KEY
         
         self.model = LLM_MODEL
     

@@ -9,11 +9,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 # Model Configuration
-EMBEDDING_MODEL = "text-embedding-ada-002"
+EMBEDDING_MODEL = "openai/text-embedding-ada-002"
 LLM_MODEL = "gpt-3.5-turbo-16k"
-
-# Vector Database
-CHROMA_PERSIST_DIRECTORY = "data/knowledge_base/chroma_db"
 
 # Retrieval Settings
 TOP_K_RESULTS = 5
