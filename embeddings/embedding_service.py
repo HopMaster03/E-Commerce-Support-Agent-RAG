@@ -38,7 +38,6 @@ class EmbeddingService:
                 
         return embeddings
     
-    ### TODO: Check if this function is required
     def get_query_embedding(self, query):
         """Generate embedding for a single text"""
         if not query:
