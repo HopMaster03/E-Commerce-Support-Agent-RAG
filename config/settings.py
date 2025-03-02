@@ -6,13 +6,14 @@ load_dotenv()
 
 # API Keys
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 
 # Model Configuration
 EMBEDDING_MODEL = "openai/text-embedding-ada-002"
 LLM_MODEL = "gpt-3.5-turbo-16k"
 
+
 # Retrieval Settings
+BATCH_SIZE = 5
 TOP_K_RESULTS = 5
 SIMILARITY_THRESHOLD = 0.75
 

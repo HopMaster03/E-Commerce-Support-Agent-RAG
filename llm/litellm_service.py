@@ -1,9 +1,8 @@
 import litellm
-from config.settings import OPENAI_API_KEY, ANTHROPIC_API_KEY, LLM_MODEL, MAX_TOKENS, TEMPERATURE
+from config.settings import OPENAI_API_KEY, LLM_MODEL, MAX_TOKENS, TEMPERATURE
 
 class LiteLLMService:
     def __init__(self):
-        # Set API keys
         litellm.api_key = OPENAI_API_KEY
         
         self.model = LLM_MODEL

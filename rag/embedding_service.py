@@ -1,29 +1,24 @@
 import litellm
-from config.settings import OPENAI_API_KEY, EMBEDDING_MODEL
-from models.schema import OrgDetailsChunk,FAQChunk
+from config.settings import OPENAI_API_KEY, EMBEDDING_MODEL,BATCH_SIZE
 
 class EmbeddingService:
     def __init__(self):
         litellm.api_key = OPENAI_API_KEY
         self.model = EMBEDDING_MODEL
     
-    def generate_embeddings(self, texts):
+    def generate_embeddings(self, texts: list):
         """
         Generate embeddings for a list of texts
-        
         Args:
-            texts (list): List of text strings
-            
+            texts (list): List of text strings   
         Returns:
             list: List of embedding vectors
         """
         if not texts:
             return []
-            
-        # Handle batching for efficiency
+
         embeddings = []
-        batch_size = 5  # Can adjust based on document size and Rate limit
-        
+        batch_size = BATCH_SIZE 
         for i in range(0, len(texts), batch_size):
             batch = texts[i:i+batch_size]
             try:
@@ -38,9 +33,13 @@ class EmbeddingService:
                 
         return embeddings
     
-    ### TODO: Check if this function is required
-    def get_query_embedding(self, query):
-        """Generate embedding for a single text"""
+    def get_query_embedding(self, query : str):
+        """Generate embedding for a single text
+        Args:
+            query: str: User query
+        Returns:
+            returns query Embeddings
+        """
         if not query:
             return None
             
