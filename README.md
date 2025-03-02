@@ -1,10 +1,10 @@
 <div align="left" style="position: relative;">
-<img src="E-Commerce-Support-Agent-RAG.png" align="right" width="30%" style="margin: -20px 0 0 20px;">
-<h1>E-COMMERCE-SUPPORT-AGENT-RAG</h1>
-<p align="left">
+<img src="agent_flowchart.png" style="margin: -20px 0 0 20px;">
+<h1 align="center">E-COMMERCE-SUPPORT-AGENT-RAG</h1>
+<p align="center">
 	<em>Empowering Commerce with Conversational AI Precision</em>
 </p>
-<p align="left">
+<p align="center">
 	<img src="https://img.shields.io/github/license/HopMaster03/E-Commerce-Support-Agent-RAG?style=default&logo=opensourceinitiative&logoColor=white&color=a2aaad" alt="license">
 	<img src="https://img.shields.io/github/last-commit/HopMaster03/E-Commerce-Support-Agent-RAG?style=default&logo=git&logoColor=white&color=a2aaad" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/HopMaster03/E-Commerce-Support-Agent-RAG?style=default&color=a2aaad" alt="repo-top-language">
@@ -206,7 +206,10 @@ Install E-Commerce-Support-Agent-RAG using one of the following methods:
 ```sh
 ❯ pip install -r requirements.txt
 ```
-
+4. Setup `.env` file
+```sh
+❯ OPENAI_API_KEY = "your API key here"
+```
 
 ### 🤖 Usage
 Run E-Commerce-Support-Agent-RAG using the following command:
