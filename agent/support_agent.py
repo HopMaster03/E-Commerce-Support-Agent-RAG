@@ -4,7 +4,7 @@ from data.processors.text_processor import TextProcessor
 from rag.embedding_service import EmbeddingService
 from rag.vector_store import ChromaVectorStore
 from config.settings import TOP_K_RESULTS
-from llm.prompt_templates import classifier_system_message, query_system_prompt
+from llm.prompt_templates import classifier_system_message, query_system_prompt, welcome_system_message, welcome_prompt
 from agent.utils import parse_llm_intent
 
 from typing import List, Dict, Any
@@ -78,9 +78,6 @@ class CustomerSupportAgent:
 
     def welcome_message(self):
         """Generate a welcome message for the chatbot"""
-        prompt = "Generate a brief welcome message for a customer contacting e-commerce support."
-        system_message = "You are a friendly customer support agent for an e-commerce store."
-        
-        welcome_message = self.llm_service.generate_response(prompt, system_message)
+        welcome_message = self.llm_service.generate_response(welcome_prompt, welcome_system_message)
         
         return welcome_message
