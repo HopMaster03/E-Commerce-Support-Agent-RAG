@@ -34,12 +34,12 @@ class CustomerSupportAgent:
 
         embeddings = self.embedding_service.generate_embeddings(embedding_text)
         
-        ids = self.vector_store.add_embeddings(
+        self.vector_store.add_embeddings(
             embeddings=embeddings,
             texts=document_text,
             metadatas=metadata_text
         )
-        return ids
+       
 
     def process_query(self, query: str):
         """Classify query to adopt Adaptive RAG technique,

@@ -33,7 +33,7 @@ class ChromaVectorStore:
         texts: List[str] = None,
         metadatas: Optional[List[Dict[str, Any]]] = None,
         ids: Optional[List[str]] = None
-    ) -> List[str]:
+    ):
         """
         Add embeddings to the collection.
         
@@ -55,7 +55,7 @@ class ChromaVectorStore:
             metadatas=metadatas,
             ids=new_ids
         )
-        return new_ids
+        
 
     
     
