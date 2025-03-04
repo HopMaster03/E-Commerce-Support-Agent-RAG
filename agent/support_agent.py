@@ -47,7 +47,7 @@ class CustomerSupportAgent:
             Generates Customer Data if Order details apply
             
             Args:
-                query: str : query received by user 
+                query: str : query received from user 
             Returns:
                 query_response: str : Contains the LLM generated response
         """
